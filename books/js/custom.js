@@ -1,49 +1,56 @@
-function filtrarLivros() {
-    const pesquisa = document.getElementById("pesquisa").value.toLowerCase();
-    const livros = document.querySelectorAll(".book-item");
-  
-    livros.forEach(livro => {
-        const titulo = livro.querySelector("h3").textContent.toLowerCase();
-        if (titulo.includes(pesquisa)) {
-            livro.style.display = "block";
-        } else {
-            livro.style.display = "none";
-        }
-    });
+  function mostrarDetalhes(id) {
+    const detalhes = document.getElementById(id);
+    detalhes.style.display =
+      detalhes.style.display === "block" ? "none" : "block";
   }
-  function mostrarDetalhes(livroId) {
-    const detalhesLivro = document.getElementById(livroId);
-    detalhesLivro.classList.toggle("visivel");
+
+  // Transição suave entre páginas
+document.querySelectorAll("a.transition-link").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const url = this.href;
+
+    // Aplicar efeito fade-out
+    document.body.classList.add("fade-out");
+
+    // Aguardar transição e ir para a página
+    setTimeout(() => {
+      window.location.href = url;
+    }, 250);
+  });
+});
+
+// Detectar página atual e ativar item do menu
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
   }
-  document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        target.scrollIntoView({ behavior: "smooth" });
+});
+
+function pesquisarLivro() {
+  const termo = document.getElementById("searchInput").value.toLowerCase();
+  const livros = document.getElementsByClassName("book-item");
+
+  for (let livro of livros) {
+    const titulo = livro.querySelector(".book-title").textContent.toLowerCase();
+    livro.style.display = titulo.includes(termo) ? "block" : "none";
+  }
+}
+
+/* Transição suave entre páginas */
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".transition-link");
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      document.body.classList.remove("fade-in");
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 300);
     });
   });
-  function mostrarDetalhes(detalhesId) {
-    const detalhes = document.getElementById(detalhesId);
-    if (detalhes.style.display === "none") {
-        detalhes.style.display = "block"; // Mostra os detalhes
-    } else {
-        detalhes.style.display = "none"; // Oculta os detalhes
-    }
-  }
-  function pesquisarLivro() {
-    const termoPesquisa = document.getElementById("searchInput").value.toLowerCase();
-    const livros = document.getElementsByClassName("book-item");
-  
-    for (let livro of livros) {
-        const titulo = livro.querySelector(".book-title").textContent.toLowerCase();
-        
-        // Exibe todos os livros se o campo de pesquisa estiver vazio
-        if (termoPesquisa === "") {
-            livro.style.display = "block";
-        } else if (titulo.includes(termoPesquisa)) {
-            livro.style.display = "block"; // Exibe o livro se for correspondente
-        } else {
-            livro.style.display = "none"; // Oculta o livro se não for correspondente
-        }
-    }
-  }  
+});

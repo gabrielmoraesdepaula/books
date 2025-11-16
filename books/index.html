@@ -1,58 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Livros</title>
-    <link rel="stylesheet" href="css/style.css"> 
-    <script src="js/custom.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Livros - Página 1</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/custom.js" defer></script>
 </head>
-<body>
-    <header>
-        <h1>Catálogo de Livros</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="fade-in">
+  <header>
+    <h1>Catálogo de Livros</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Barra de Pesquisa -->
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Digite o título do livro" oninput="pesquisarLivro()">
-        <button onclick="pesquisarLivro()">Pesquisar</button>
-    </div>    
+  <!-- Barra de Pesquisa -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Digite o título do livro" oninput="pesquisarLivro()">
+    <button onclick="pesquisarLivro()">Pesquisar</button>
+  </div>    
 
-    <!-- Exemplo de item de livro -->
-    <div class="book-container">
-        <div class="book-item" id="livro1">
-            <img src="images/segredos-do-trafego.jpg" alt="Capa do Livro"> <!-- Atualize o caminho aqui -->
-            <h3 class="book-title">Segredos do Tráfego</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro1')">Ver Detalhes</button>
-            <div id="detalhes-livro1" class="detalhes-livro" style="display: none;">
-                <p>"Segredos do Tráfego" é o manual para empreendedores que desejam dominar as estratégias de tráfego online e atrair os
-                    clientes dos seus sonhos. Escrito por Russell Brunson, CEO e cofundador da ClickFunnels, este livro oferece insights
-                    valiosos sobre a arte e a ciência de fazer com que o tráfego – ou seja, as pessoas – encontrem você online. 
-                    Brunson revela técnicas clássicas e fundamentais de marketing direto que permitem aos empreendedores estar na 
-                    vanguarda das novas tendências, identificar oportunidades invisíveis para a maioria e dominar táticas emergentes 
-                    antes mesmo que elas se tornem amplamente conhecidas. Com instruções passo a passo para dominar múltiplas fontes de 
-                    tráfego, este livro oferece estratégias testadas no mercado para entender quem são os seus clientes ideais, 
-                    onde eles estão e como atrair sua atenção para seus funis. Em "Segredos do Tráfego", você encontrará uma fórmula 
-                    comprovada para direcionar tráfego para seu negócio, produto ou site, usando um modelo estratégico de longo prazo, 
-                    que independe das mudanças no cenário digital. Se você está pronto para encher seus sites e funis com os clientes dos 
-                    seus sonhos, "Segredos do Tráfego" é o seu guia essencial.</p>
-                <p>(Autor) Russell Brunson</p>
-            </div>
-            <a href="https://www.amazon.com.br/Traffic-Secrets-Segredos-tráfego-Russell/dp/B0CYG1V9BL/ref=sr_1_1?crid=2Q76MXPZT1W83&dib=eyJ2IjoiMSJ9.Ym1mm9SD7FJtwzFBDF_W5gBsaDe54Vpg145ssrj6oo0DF8XtcuzRz3p4RX6dqNXdglprv3T2yU9eXhGTKQ2DEGV8Ymv2iZMk6Mu5njBOPByzN4xEgeV8DBBhxxGxH_0siSLf8d1c-cbTr8qDTXde23JEjs9CTAjCowBDnR4SNVWXkQ6sZyPmjTD_vSh7p2m0H5g4pzQ1S-iAtxyfiibqHOQvpXcGFaSals1yrLuWaScB3ESfGUge9w6KDMBMgkY_t4TWv_MgN3yYoB0JxNpty4_ysPNjeTqhFmTwfTtFBX0.FiqNloHt3ZpLTihh8dMwgeZJodzzCvR3CYQZT6zLO9I&dib_tag=se&keywords=traffic+secrets+portugues&qid=1730212660&sprefix=traffic+secrets%2Caps%2C209&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank" class="link-livro">Compre aqui</a>
-        </div>
-        <div class="book-item" id="livro2">
-            <img src="images/as-armas-da-persuasao.jpg" alt="Capa do Livro">
-            <h3 class="book-title">As Armas da Persuasão</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro2')">Ver Detalhes</button>
-            <div id="detalhes-livro2" class="detalhes-livro" style="display: none;">
-                <p>Depois de passar anos caindo na lábia de vendedores, arrecadadores de doações e operadores de telemarketing, o psicólogo 
+  <!-- Livros -->
+<div class="book-list">
+
+  <div class="book-item" id="livro1">
+        <img
+        src="images/as-armas-da-persuasao.webp"
+        alt="Capa do Livro As Armas da Persuasão"
+      />
+    <h3 class="book-title">As Armas da Persuasão</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro1')">Ver Detalhes</button>
+    <div id="detalhes-livro1" class="detalhes-livro">
+    <p>
+          <strong>As Armas da Persuasão</strong> Depois de passar anos caindo na lábia de vendedores, arrecadadores de doações e operadores de telemarketing, o psicólogo 
                     Robert B. Cialdini resolveu se dedicar ao estudo da persuasão. Ele queria entender quais são os fatores que levam uma 
                     pessoa a dizer "sim" a um pedido e que técnicas exploram melhor esses fatores.
                     Reunindo dados das mais recentes pesquisas científicas sobre o assunto, his­tórias de gente comum e a experiência 
@@ -72,267 +57,293 @@
                     Cada princípio é discutido pelo autor em termos de sua função na sociedade e de como um profissional da persuasão pode 
                     mobilizar seu poder em pedidos de compras, doações, concessões, votos, permissões, etc. Além disso, aprendemos a usar 
                     essas técnicas a nosso favor nas interações diárias de todo tipo, com vizinhos, amigos, colegas, parceiros de negócios ou 
-                    familiares.</p>
-                <p>(Autor) Robert B. Cialdini</p>
-            </div>
-            <a href="https://www.amazon.com.br/As-armas-persuasão-Robert-Cialdini/dp/8575428098" target="_blank" class="link-livro">Compre aqui</a>
+                    familiares
+        </p>
+    <p><strong>Autor:</strong> Robert B. Cialdini</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/As-armas-persuasão-Robert-Cialdini/dp/8575428098"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        
-        <div class="book-item" id="livro3">
-            <img src="images/manual-de-persuasao-do-fbi.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Manual de Persuasão do FBI</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro3')">Ver Detalhes</button>
-            <div id="detalhes-livro3" class="detalhes-livro" style="display: none;">
-                <p>Ex-agente do FBI ensina como influenciar, atrair e conquistar pessoas!
-                    Como um agente especial para o Programa de Análise Comportamental da Divisão de Segurança Nacional do FBI, 
-                    Dr. Jack Schafer desenvolveu estratégias dinâmicas e inovadoras para entrevistar terroristas e detectar mentiras. 
-                    Agora, Dr. Schafer evoluiu suas táticas e nos ensina como aplicá-las no cotidiano para obter sucesso nas relações 
-                    interpessoais.
-                    Você quer pensar e reagir como os investigadores de TV do Criminal Minds, CSI ou Lie to Me? Quer influenciar pessoas 
-                    recém-conhecidas e planejar a imagem pessoal que transmitirá no dia a dia? Quer entender através da linguagem 
-                    corporal o que passa pela cabeça das pessoas ao seu redor? Quer descobrir se alguém está mentindo?
-                    Caso tenha respondido sim para alguma dessas perguntas, este é o livro perfeito para você.</p>
-                <p>(Autor) Jack Shafer, Marvin Karlins</p>
-            </div>
-            <a href="https://www.amazon.com.br/Manual-Persuasão-FBI-Jack-Shafer/dp/8579308518/ref=sr_1_1?crid=1XAH8M2YQNP3U&dib=eyJ2IjoiMSJ9.AkdmImSWLW0C0eRhnbZNgVNvwGyRn1vmx_EQ1wXD9-5PoxUkNqrOtfZ5bBCk-MsrU2kxjNJIWasDTIPyGHXfaMcWKEDW9HcANFY16wNdwAicJLI8z26SNAaE_4ApYgm8ENozaCJEtmEoE8TNp3_52dWxJ2ZlTzyjd05cWRAbpyKcJDUkRK6hoVpxTwXLHpwnM4-dgtiyZ57W_o6X0fV9a0MYpblxn1xlsbuP3suM-EmHVe0m-bbnDnaIcowInjjq-DVw72wJG1fc37oVW_hZEMsLjW1j2KZiV3sVyzBGkQA.PWyIF5Me7IPrt6TAIm_G4FJgbGcO_SR1Nr5wn3krwhk&dib_tag=se&keywords=manual+de+persuasão+do+fbi&qid=1730240463&sprefix=manual+de+%2Caps%2C274&sr=8-1" target="_blank" class="link-livro">Compre aqui</a>
+      <div class="book-item" id="livro2">
+        <img
+        src="images/manual-de-persuasao-do-fbi.jpg"
+        alt="Capa do Livro Manual de Persuasão do FBI"
+      />
+    <h3 class="book-title">Manual de Persuasão do FBI</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro2')">Ver Detalhes</button>
+    <div id="detalhes-livro2" class="detalhes-livro">
+    <p>
+          <strong>Manual de Persuasão do FBI</strong> Ex-agente do FBI ensina como influenciar, 
+        atrair e conquistar pessoas!
+        Como um agente especial para o Programa de Análise Comportamental da Divisão de Segurança 
+        Nacional do FBI, Dr. Jack Schafer desenvolveu estratégias dinâmicas e inovadoras para 
+        entrevistar terroristas e detectar mentiras. 
+        Agora, Dr. Schafer evoluiu suas táticas e nos ensina como aplicá-las no cotidiano para 
+        obter sucesso nas relações interpessoais.
+        Você quer pensar e reagir como os investigadores de TV do Criminal Minds, CSI ou Lie to Me? 
+        Quer influenciar pessoas recém-conhecidas e planejar a imagem pessoal que transmitirá no 
+        dia a dia? Quer entender através da linguagem corporal o que passa pela cabeça das pessoas 
+        ao seu redor? Quer descobrir se alguém está mentindo? Caso tenha respondido sim para alguma 
+        dessas perguntas, este é o livro perfeito para você.
+        </p>
+    <p><strong>Autor:</strong> Jack Shafer, Marvin Karlins</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/Manual-Persuasão-FBI-Jack-Shafer/dp/8579308518/ref=sr_1_1?crid=1XAH8M2YQNP3U&dib=eyJ2IjoiMSJ9.AkdmImSWLW0C0eRhnbZNgVNvwGyRn1vmx_EQ1wXD9-5PoxUkNqrOtfZ5bBCk-MsrU2kxjNJIWasDTIPyGHXfaMcWKEDW9HcANFY16wNdwAicJLI8z26SNAaE_4ApYgm8ENozaCJEtmEoE8TNp3_52dWxJ2ZlTzyjd05cWRAbpyKcJDUkRK6hoVpxTwXLHpwnM4-dgtiyZ57W_o6X0fV9a0MYpblxn1xlsbuP3suM-EmHVe0m-bbnDnaIcowInjjq-DVw72wJG1fc37oVW_hZEMsLjW1j2KZiV3sVyzBGkQA.PWyIF5Me7IPrt6TAIm_G4FJgbGcO_SR1Nr5wn3krwhk&dib_tag=se&keywords=manual+de+persuasão+do+fbi&qid=1730240463&sprefix=manual+de+%2Caps%2C274&sr=8-1"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro4">
-            <img src="images/o-metodo-de-vendas-de-napoleon-hill.jpg" alt="Capa do Livro">
-            <h3 class="book-title">O Método de Vendas de Napoleon Hill</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro4')">Ver Detalhes</button>
-            <div id="detalhes-livro4" class="detalhes-livro" style="display: none;">
-                <p>A mais completa compilação dos escritos de Napoleon Hill sobre persuasão, marketing e técnicas de vendas Poucas 
-                    pessoas compreenderam a arte de vender tão bem quanto Napoleon Hill. Ele se tornou uma lenda nos círculos de 
-                    negócios por criar cursos de vendas capazes de alavancar empresas insolventes até então. A filosofia de sucesso de 
-                    Hill para vendedores era simples - você, o vendedor, é o ativo mais valioso e precisa se vender primeiro. 
-                    Apresente a solução de um problema e a venda acontecerá naturalmente. Encontre aqui o que há de melhor nos escritos 
-                    de Napoleon Hill sobre os seus cursos de vendas. Nada acontece no mundo dos negócios até que aconteça uma venda. 
-                    O vendedor é o precursor do triunfo, do sucesso e do desenvolvimento. Lembre-se sempre disso: você, vendedor, 
-                    é a alma de qualquer negócio. Quando abordar alguém, nivele a sua energia e o seu poder, 
-                    olhando nos olhos da pessoa, com aperto de mão firme. Tenha uma personalidade poderosa de vendas. 
-                    Solucione uma necessidade do cliente. Nesse momento, precisa haver uma energia de respeito mútuo. 
-                    Prepare-se: este livro lhe entregará o segredo para acender o desejo ardente de vender e fazer o seu próprio sucesso. 
-                    Jamil Albuquerque - Presidente MasterMind e Conselheiro mundial da Fundação Napoleon Hill.</p>
-                <p>(Autor) Napoleon Hill</p>
-            </div>
-            <a href="https://www.amazon.com.br/método-vendas-Napoleon-Hill/dp/6550471109/ref=sr_1_1?__mk_pt_BR=ÅMÅŽÕÑ&crid=1I4HT0R36UWEW&dib=eyJ2IjoiMSJ9.RYO5i1qIlqa3FeQqz2wBY-pQvCCdSz7EH-Ne1NddOjUUJgICb4jbYgomdZ90wEkQLcWtPDK6vqFPXFgoTp3ISkqAfzygZRer2Wyq2ZoxSPa9t56bcxZZX8LSX5m-FXQD1RJNJzVPCXgMFO9NmgZkM2a_VrTJyLw7j3UG9CkJ4KPzqQAnOhPFYXjSiPE2tA2XSxi6Uc7P5xYDdUfLzkg077Wbys-Ttd656co1xKHFukE8O1PkfRJILBpomDIY1QKaTB5Opp1H1QCMXghPCjj9i9TidJ14LmNH2F4spz23hBQ.VHZf3j7oJAaPf-yGBgqKd3Hgyf5cBbNSrm_xusHqgMc&dib_tag=se&keywords=o+método+de+vendas&qid=1730240787&sprefix=o+metodo+de+vendas%2Caps%2C245&sr=8-1" target="_blank" class="link-livro">Compre aqui</a>
+      <div class="book-item" id="livro3">
+        <img
+        src="images/o-metodo-de-vendas-de-napoleon-hill.webp"
+        alt="Capa do Livro O Método de Vendas de Napoleon Hill"
+      />
+    <h3 class="book-title">O Método de Vendas de Napoleon Hill</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro3')">Ver Detalhes</button>
+    <div id="detalhes-livro3" class="detalhes-livro">
+    <p>
+          <strong>O Método de Vendas de Napoleon Hill</strong> A mais completa compilação dos 
+        escritos de Napoleon Hill sobre persuasão, marketing e técnicas de vendas Poucas pessoas 
+        compreenderam a arte de vender tão bem quanto Napoleon Hill. Ele se tornou uma lenda nos 
+        círculos de negócios por criar cursos de vendas capazes de alavancar empresas insolventes 
+        até então. A filosofia de sucesso de Hill para vendedores era simples - você, o vendedor, 
+        é o ativo mais valioso e precisa se vender primeiro. 
+        Apresente a solução de um problema e a venda acontecerá naturalmente. Encontre aqui o que 
+        há de melhor nos escritos de Napoleon Hill sobre os seus cursos de vendas. Nada acontece 
+        no mundo dos negócios até que aconteça uma venda. 
+        O vendedor é o precursor do triunfo, do sucesso e do desenvolvimento. Lembre-se sempre 
+        disso: você, vendedor, é a alma de qualquer negócio. Quando abordar alguém, nivele a sua 
+        energia e o seu poder, olhando nos olhos da pessoa, com aperto de mão firme. Tenha uma 
+        personalidade poderosa de vendas. Solucione uma necessidade do cliente. Nesse momento, 
+        precisa haver uma energia de respeito mútuo. Prepare-se: este livro lhe entregará o 
+        segredo para acender o desejo ardente de vender e fazer o seu próprio sucesso. 
+        Jamil Albuquerque - Presidente MasterMind e Conselheiro mundial da Fundação Napoleon Hill.
+        </p>
+    <p><strong>Autor:</strong> Napoleon Hill</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/método-vendas-Napoleon-Hill/dp/6550471109/ref=sr_1_1?__mk_pt_BR=ÅMÅŽÕÑ&crid=1I4HT0R36UWEW&dib=eyJ2IjoiMSJ9.RYO5i1qIlqa3FeQqz2wBY-pQvCCdSz7EH-Ne1NddOjUUJgICb4jbYgomdZ90wEkQLcWtPDK6vqFPXFgoTp3ISkqAfzygZRer2Wyq2ZoxSPa9t56bcxZZX8LSX5m-FXQD1RJNJzVPCXgMFO9NmgZkM2a_VrTJyLw7j3UG9CkJ4KPzqQAnOhPFYXjSiPE2tA2XSxi6Uc7P5xYDdUfLzkg077Wbys-Ttd656co1xKHFukE8O1PkfRJILBpomDIY1QKaTB5Opp1H1QCMXghPCjj9i9TidJ14LmNH2F4spz23hBQ.VHZf3j7oJAaPf-yGBgqKd3Hgyf5cBbNSrm_xusHqgMc&dib_tag=se&keywords=o+método+de+vendas&qid=1730240787&sprefix=o+metodo+de+vendas%2Caps%2C245&sr=8-1"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro5">
-            <img src="images/o-lider-em-mim.jpg" alt="Capa do Livro">
-            <h3 class="book-title">O Líder em Mim</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro5')">Ver Detalhes</button>
-            <div id="detalhes-livro5" class="detalhes-livro" style="display: none;">
-                <p>Tirar boas notas, absorver os conhecimentos do currículo escolar, desenvolverse intelectualmente... 
-                    tudo isso é importante na vida dos alunos. Mas, ao focar apenas nesses aspectos, 
-                    muitas escolas deixam de lidar com problemas urgentes. Como reduzir a indisciplina? Como estimular a proatividade e 
-                    a criatividade? Como fazer com que os alunos trabalhem melhor em equipe?
-                    Foi pensando em resolver questões como essas que a professora Muriel Summers desenvolveu uma forma de aplicar nas 
-                    escolas os famosos 7 Hábitos de Stephen R. Covey (introduzidos na obra Os 7 hábitos das pessoas altamente eficazes). 
-                    Ao aprender princípios como “seja proativo”, “pense ganhaganha” e “faça primeiro o mais importante”, 
-                    os estudantes se tornam mais autoconfiantes e independentes, e passam a adotar novas atitudes não apenas na escola, 
-                    como também na família e na comunidade.
-                    O Líder em Mim traz toda a história desse bemsucedido programa educacional, além de dicas de como implementálo em 
-                    qualquer instituição de ensino. Essa é a grande chance de mudar o futuro das crianças, tornandoas aptas a enfrentar 
-                    o mundo adulto com maturidade, tranquilidade e ética.</p>
-                <p>(Autor) Stephen R. Covey, Sean Covey, Muriel Summers, David K. Hatch, Muriel Summers e David K. Hatch</p>
-            </div>
-            <a href="https://www.amazon.com.br/líder-mim-escolas-inspirando-grandeza/dp/8557171382/ref=sr_1_2?dib=eyJ2IjoiMSJ9.f159MaM1_ctRSjUKRhG9qiAEg1Hjeot1H1YOxZVdZ5d-384OvOwt1_7E0v38H4ImrzQN97Ai6ukE-vsP3U_kEtBuypv5PbLQRBbS061meYUPE8AZqKW4M4e1YBpQXu5e7wnG5MrsAyjc-cavmtDwbcq5FbyqHND3ADX-2rhi_y5FL6KeVZZCrd5ejMeXF7k-EkCwXtvrk6Lc8rVo94Wi-M1VC672Kvdn_QAEKMAdnflqPuQ8TBIJOrkaSLsUmYM2VdVP64L5W7d7Yi2Fsqs-u3NPsRjBdSKaByjg-Zh7J_o.WS_UPeKugCy82gIK3U1D54CnzUYftEPHlep03y6DS_s&dib_tag=se&keywords=o+líder+em+mim&qid=1732026577&sr=8-2&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" target="_blank" class="link-livro">Compre aqui</a>
+      <div class="book-item" id="livro4">
+        <img
+        src="images/o-lide-em-mim.jpg"
+        alt="Capa do Livro O Líder em Mim"
+      />
+    <h3 class="book-title">O Líder em Mim</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro4')">Ver Detalhes</button>
+    <div id="detalhes-livro4" class="detalhes-livro">
+    <p>
+          <strong>O Líder em Mim</strong> Tirar boas notas, absorver os conhecimentos do currículo 
+        escolar, desenvolverse intelectualmente... tudo isso é importante na vida dos alunos. 
+        Mas, ao focar apenas nesses aspectos, muitas escolas deixam de lidar com problemas 
+        urgentes. Como reduzir a indisciplina? Como estimular a proatividade e a criatividade? 
+        Como fazer com que os alunos trabalhem melhor em equipe? Foi pensando em resolver 
+        questões como essas que a professora Muriel Summers desenvolveu uma forma de aplicar nas 
+        escolas os famosos 7 Hábitos de Stephen R. Covey (introduzidos na obra Os 7 hábitos das 
+        pessoas altamente eficazes). O aprender princípios como “seja proativo”, “pense ganhaganha” 
+        e “faça primeiro o mais importante”, os estudantes se tornam mais autoconfiantes e 
+        independentes, e passam a adotar novas atitudes não apenas na escola, como também na 
+        família e na comunidade. O Líder em Mim traz toda a história desse bemsucedido programa 
+        educacional, além de dicas de como implementálo em qualquer instituição de ensino. Essa é 
+        a grande chance de mudar o futuro das crianças, tornandoas aptas a enfrentar o mundo 
+        adulto com maturidade, tranquilidade e ética.
+        </p>
+    <p><strong>Autor:</strong> Stephen R. Covey, Sean Covey, Muriel Summers, David K. Hatch</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/líder-mim-escolas-inspirando-grandeza/dp/8557171382/ref=sr_1_2?dib=eyJ2IjoiMSJ9.f159MaM1_ctRSjUKRhG9qiAEg1Hjeot1H1YOxZVdZ5d-384OvOwt1_7E0v38H4ImrzQN97Ai6ukE-vsP3U_kEtBuypv5PbLQRBbS061meYUPE8AZqKW4M4e1YBpQXu5e7wnG5MrsAyjc-cavmtDwbcq5FbyqHND3ADX-2rhi_y5FL6KeVZZCrd5ejMeXF7k-EkCwXtvrk6Lc8rVo94Wi-M1VC672Kvdn_QAEKMAdnflqPuQ8TBIJOrkaSLsUmYM2VdVP64L5W7d7Yi2Fsqs-u3NPsRjBdSKaByjg-Zh7J_o.WS_UPeKugCy82gIK3U1D54CnzUYftEPHlep03y6DS_s&dib_tag=se&keywords=o+líder+em+mim&qid=1732026577&sr=8-2&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro6">
-            <img src="images/empreendedorismo-tributario.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Empreendedorismo Tributário</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro6')">Ver Detalhes</button>
-            <div id="detalhes-livro6" class="detalhes-livro" style="display: none;">
-                <p>Dentre as oportunidades para empreender, a área tributária tem se apresentado como uma excelente alternativa, 
-                    e não é difícil entender o porquê. Nosso sistema tributário é composto por uma vasta legislação esparsa, 
-                    repleta de exceções, falhas, ilegalidades e inconstitucionalidades. Como se não bastasse ser muito difícil – 
-                    ou praticamente impossível – conhecer todas as regras vigentes, essas normas sofrem alterações a todo momento e os 
-                    contribuintes são massacrados por um número excessivo de obrigações acessórias.
-                    Diante de tudo isso, é raro encontrar uma empresa que não cometa algum tipo de deslize, deixando de recolher o 
-                    montante devido de tributos, ou os recolhendo a maior. Para dificultar ainda mais esse cenário, a fiscalização vem 
-                    se tornando cada vez mais eficiente, o que aumenta significativamente o risco dos contribuintes.
-                    Percebe-se, então, neste panorama caótico, que existe uma excelente oportunidade a ser aproveitada pelos 
-                    profissionais que atuam na área tributária. São milhões de empresas necessitando de especialistas que atuem no 
-                    compliance fiscal, que administrem eventuais passivos tributários, que consigam implantar um planejamento tributário 
-                    sério e que promovam as medidas cabíveis para recuperar valores constantemente recolhidos de forma indevida 
-                    ou a maior.
-                    Em “Empreendedorismo Tributário, Frederico Amaral compartilha a experiência adquirida em mais de três décadas de 
-                    atuação e convívio com milhares de tributaristas em todo o Brasil. Abordando temas como empreendedorismo, marketing, 
-                    vendas, recuperação de créditos tributários e compliance fiscal, esta obra é destinada a todos que têm a meta de 
-                    progredir profissionalmente através das diversas oportunidades que o segmento tributário oferece.</p>
-                <p>(Autor) Frederico Amaral</p>
-            </div>
-            <a href="https://www.amazon.com.br/Empreendedorismo-Tributário-oportunidades-tributárias-profissional-ebook/dp/B0BZ3H32NN/ref=sr_1_1?crid=2DHV9L9N7P49N&dib=eyJ2IjoiMSJ9.hqz2GuIUyTd2FqdGpa2V9CzIXE4Ky_bWaIv4XoIKKV0lz1r1yugdh69BmZQgULGq5H5n2pb5ViKRmWpT5uAEQDUAjsE_hmieKwkSu3KsBB5Xp3jUpppL_YKUFnKqVMh1L2qGKNWX4NdX6Qh5t5DfKO7fjeN_Q71CxHhcHB8Wpn6VeO2sagmFFYjd4YKpLtjgZBDKMkCma2zdEE-k72UaWSicsUS4kgodlG38rOzmLVY.ldsbRiYJNUFUNrv7ALYNGhjTsVbbjdwa7WhNzbGqeIw&dib_tag=se&keywords=empreendedorismo+tributário&qid=1730241517&s=digital-text&sprefix=empreende%2Cdigital-text%2C214&sr=1-1" target="_blank" class="link-livro">Compre aqui</a>
+      <div class="book-item" id="livro5">
+        <img
+        src="images/desvendando-os-segredos-da-linguagem-corporal.jpg"
+        alt="Capa do Livro Desvendando os Segredos da Linguagem Corporal"
+      />
+    <h3 class="book-title">Desvendando os Segredos da Linguagem Corporal</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro5')">Ver Detalhes</button>
+    <div id="detalhes-livro5" class="detalhes-livro">
+    <p>
+          <strong>Desvendando os Segredos da Linguagem Corporal</strong> Um gesto vale mais do que 
+        mil palavras. Provavelmente você já ouviu esta frase, mas talvez não tenha se dado conta 
+        do quanto ela é verdadeira. Em Desvendando os segredos da linguagem corporal Allan e 
+        Barbara Pease esclarecem que 93% da comunicação humana é feita através de expressões 
+        faciais e movimentos do corpo. Quando aprendemos a prestar atenção em nossa linguagem 
+        corporal e a interpretar corretamente a dos outros, passamos a ter maior controle sobre as 
+        situações, pois podemos identificar sinais de abertura, de tédio, de atração ou de 
+        rivalidade e agir de forma adequada aos nossos objetivos.
+        Com bom-humor e uma sólida base científica, os autores de Por que os homens fazem sexo e as 
+        mulheres fazem amor? explicam o significado real de gestos que usamos no dia a dia, como 
+        cruzar os braços, coçar o nariz e balançar a cabeça, evitando os habituais mal-entendidos 
+        causados pela contradição entre o que dizem nossas palavras e nosso corpo. Este guia 
+        fundamental ensina como melhorar os relacionamentos, aumentando nossa capacidade de 
+        comunicação e de entendimento com as pessoas.
+        </p>
+    <p><strong>Autor:</strong> Allan Pease, Barbara Pease</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/Desvendando-os-segredos-linguagem-corporal/dp/8575421824"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro7">
-            <img src="images/desvendando-os-segredos-da-liguagem-corporal.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Desvendando os Segredos da Linguagem Corporal</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro7')">Ver Detalhes</button>
-            <div id="detalhes-livro7" class="detalhes-livro" style="display: none;">
-                <p>Um gesto vale mais do que mil palavras. Provavelmente você já ouviu esta frase, mas talvez não 
-                    tenha se dado conta do quanto ela é verdadeira. Em Desvendando os segredos da linguagem 
-                    corporal Allan e Barbara Pease esclarecem que 93% da comunicação humana é feita através de 
-                    expressões faciais e movimentos do corpo.
-                    Quando aprendemos a prestar atenção em nossa linguagem corporal e a interpretar corretamente 
-                    a dos outros, passamos a ter maior controle sobre as situações, pois podemos identificar 
-                    sinais de abertura, de tédio, de atração ou de rivalidade e agir de forma adequada aos nossos 
-                    objetivos.
-                    Com bom-humor e uma sólida base científica, os autores de Por que os homens fazem sexo e as 
-                    mulheres fazem amor? explicam o significado real de gestos que usamos no dia a dia, como 
-                    cruzar os braços, coçar o nariz e balançar a cabeça, evitando os habituais mal-entendidos 
-                    causados pela contradição entre o que dizem nossas palavras e nosso corpo. Este guia 
-                    fundamental ensina como melhorar os relacionamentos, aumentando nossa capacidade de 
-                    comunicação e de entendimento com as pessoas.</p>
-                <p>(Autor) Allan Pease, Barbara Pease</p>
-            </div>
-            <a href="https://www.amazon.com.br/Desvendando-os-segredos-linguagem-corporal/dp/8575421824">Compre aqui</a>
+      <div class="book-item" id="livro6">
+        <img
+        src="images/como-identificar-um-mentiroso.jpg"
+        alt="Capa do Livro Como Identificar um Mentiroso"
+      />
+    <h3 class="book-title">Como Identificar um Mentiroso</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro6')">Ver Detalhes</button>
+    <div id="detalhes-livro6" class="detalhes-livro">
+    <p>
+          <strong>Como Identificar um Mentiroso</strong> Se você está interessando em aprender a 
+          detectar mentiras, este livro o ajudará a desenvolver essa capacidade com dicas simples 
+          e eficazes sobre como enxergar o que está por trás das aparências e chegar à verdade. 
+          Além de ser útil em áreas tão diversas como recrutamento de funcionários, educação, 
+          criação de filhos, relacionamentos e negócios, este livro também traz exercícios 
+          divertidos e interessantes com os quais você poderá desafiar seus amigos e familiares.
+        </p>
+    <p><strong>Autor:</strong> David Craig</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/Como-Identificar-Mentiroso-Torne-se-Verdadeiro/dp/8531612381/ref=sr_1_1?__mk_pt_BR=ÅMÅŽÕÑ&crid=42TWRP1NZ4SE&dib=eyJ2IjoiMSJ9.wVbQP8Qn0Q2VSLNpUuRehE_9RIcCMA0tI2su2ax9qq7ohFFRVMVw3xh6ufwXzY9r5qAzFi7DgZw4mItrx-OEtQXrduWhEo9KviNDZ0fNoLXjKN9B2PhH4R0ET5ZYR1QJzJoneuJSf6AnT39sDLZ9LKy922ks1UyVyEgTJFxl8TMHqeQYy7Bk1hwHublXqyaUwcQacSvwzCKEFNZMp6LqKA.vMpIHYbS06jjjSXY8nsRC6OadT6B_P3XryDbTHC5dY8&dib_tag=se&keywords=como+identificar+um+mentiroso&qid=1732025255&sprefix=como+ide%2Caps%2C215&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro8">
-            <img src="images/1984.jpg" alt="Capa do Livro">
-            <h3 class="book-title">1984</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro8')">Ver Detalhes</button>
-            <div id="detalhes-livro8" class="detalhes-livro" style="display: none;">
-                <p>Publicado em 1949, o texto de Orwell nasceu destinado à polêmica. Traduzido em mais de 
-                    sessenta países, virou minissérie, filmes, quadrinhos, mangás e até uma ópera. 
-                    Ganhou holofotes em 1999, quando uma produtora holandesa batizou seu reality show de 
-                    Big Brother. 1984 foi responsável pela popularização de muitos termos e conceitos, 
-                    como Grande Irmão, duplopensar, novidioma, buraco da memória e 2 2 5. O trabalho de Winston, 
-                    o herói de 1984, é reescrever artigos de jornais do passado, de modo que o registro histórico 
-                    sempre apoie a ideologia do Partido. Grande parte do Ministério também destrói os documentos 
-                    que não foram revisados, dessa forma não há como provar que o governo esteja mentindo. 
-                    Winston é um trabalhador diligente e habilidoso, mas odeia secretamente o Partido e sonha 
-                    com a rebelião contra o Grande Irmão.</p>
-                <p>(Autor) George Orwell</p>
-            </div>
-            <a href="https://www.amazon.com.br/1984-George-Orwell/dp/6555522267/ref=sr_1_4?crid=1NJICCWFDEMI0&dib=eyJ2IjoiMSJ9.WoVhJ8WTvdxdqKJMajHiSoUJ5CZ81B6xVNeFR4ufBF3NGe7ih9nilKdRrQIBSFguzq5nM8Iku5n4gYzgidIA58hkM5yihP7ohkFT0eSygndREn6MzQDy2HnkWSqddCmvZK2b37rBnTSAhReypox4EprF6OmRVzqAUEZGu1WjcIO3at26aIpPcaY9dEnwnlLn2LGWPb3WdlCVuRq-BBTfWsamfwxCR-D2IQ7xLLYc-L0.T6XnOufye42kIc57ngLl9gvbDa9gB3Kncf4spkMFPqs&dib_tag=se&keywords=1984+george+orwell&qid=1732024922&s=books&sprefix=1984%2Cstripbooks%2C293&sr=1-4">Compre aqui</a>
+      <div class="book-item" id="livro7">
+        <img
+        src="images/como-identificar-um-psicopata.jpg"
+        alt="Capa do Livro Como Identificar um Psicopata"
+      />
+    <h3 class="book-title">Como Identificar um Psicopata</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro7')">Ver Detalhes</button>
+    <div id="detalhes-livro7" class="detalhes-livro">
+    <p>
+          <strong>Como Identificar um Psicopata</strong> Nem todos os psicopatas são assassinos 
+        compulsivos ou criminosos, como você pode pensar. Alguns, aparentemente, são pessoas comuns. 
+        Na verdade, 1% a 3% da população em geral tem fortes tendências psicopatas. Neste livro, 
+        a psicóloga forense Kerry Daynes explica como funciona a mente de um psicopata. Ela revela 
+        os traços de comportamento que os vários tipos de psicopata têm em comum e dá sugestões de 
+        como lidar com eles ou, melhor ainda, de como evitá-los a todo custo. Por meio de estudos 
+        de caso, este livro o ajudará a identificar os possíveis psicopatas em sua vida.
+        </p>
+    <p><strong>Autor:</strong> Kerry Daynes, Jessica Fellowes</p>
+    </div>
+        <a
+           href="https://www.amazon.com.br/Como-identificar-psicopata-Kerry-Daynes/dp/8531611857/ref=sr_1_1?crid=NLJG2WR160FP&dib=eyJ2IjoiMSJ9.xzdaIYLGcODMgB10cvD3nA_1vJc6AEo_UgywzsCY3iG2rFMHq3Evqid6fOcAyQEZ4RrLf7WXf1GKtm-sY5fspkEyYDrLH_DUCy_uU9Cr8cdfyqZpOmDte9yMJyWa03vjdIRhRH7Buk5PI4Q9SaENUeEOJoCx9u2N455RYLHXEpp0v-1kz8Tn4DcaTS3RDmsCJyFlMuktq39kMs-K02lyY0MZWVc48-gU1mQqpZzaHI6pBGmdCIkEuns6Yk4kMBoGD2Mn-33UPnCxmpFKUyi4_fdEi5sh-tGnUyMie-K2274.5YSwOch6pkINE251pyH9BV6Kgso6JfTcQ_4ndvmDZGo&dib_tag=se&keywords=como+identificar+um+psicopata&qid=1732454424&sprefix=como+identificar+u%2Caps%2C268&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro9">
-            <img src="images/como-identificar-um-mentiroso.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Como Identificar um Mentiroso</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro9')">Ver Detalhes</button>
-            <div id="detalhes-livro9" class="detalhes-livro" style="display: none;">
-                <p>Se você está interessando em aprender a detectar mentiras, este livro o ajudará a desenvolver 
-                    essa capacidade com dicas simples e eficazes sobre como enxergar o que está por trás das 
-                    aparências e chegar à verdade. Além de ser útil em áreas tão diversas como recrutamento de 
-                    funcionários, educação, criação de filhos, relacionamentos e negócios, este livro também traz 
-                    exercícios divertidos e interessantes com os quais você poderá desafiar seus amigos e 
-                    familiares.</p>
-                <p>(Autor) David Craig</p>
-            </div>
-            <a href="https://www.amazon.com.br/Como-Identificar-Mentiroso-Torne-se-Verdadeiro/dp/8531612381/ref=sr_1_1?__mk_pt_BR=ÅMÅŽÕÑ&crid=42TWRP1NZ4SE&dib=eyJ2IjoiMSJ9.wVbQP8Qn0Q2VSLNpUuRehE_9RIcCMA0tI2su2ax9qq7ohFFRVMVw3xh6ufwXzY9r5qAzFi7DgZw4mItrx-OEtQXrduWhEo9KviNDZ0fNoLXjKN9B2PhH4R0ET5ZYR1QJzJoneuJSf6AnT39sDLZ9LKy922ks1UyVyEgTJFxl8TMHqeQYy7Bk1hwHublXqyaUwcQacSvwzCKEFNZMp6LqKA.vMpIHYbS06jjjSXY8nsRC6OadT6B_P3XryDbTHC5dY8&dib_tag=se&keywords=como+identificar+um+mentiroso&qid=1732025255&sprefix=como+ide%2Caps%2C215&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Compre aqui</a>
+      <div class="book-item" id="livro8">
+        <img
+        src="images/mentes-maquiavelicas.jpg"
+        alt="Capa do Livro Mentes Maquiavelicas"
+      />
+    <h3 class="book-title">Mentes Maquiavelicas</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro8')">Ver Detalhes</button>
+    <div id="detalhes-livro8" class="detalhes-livro">
+    <p>
+          <strong>Mentes Maquiavelicas</strong> O mundo está cheio de trapaceiros, vigaristas e 
+        impostores. Muitos deles podem ser adequadamente descritos com o termo maquiavélico. 
+        Tais indivíduos desrespeitam princípios morais, enganam seus companheiros e tiram vantagem 
+        da fragilidade e inocência dos outros. Tiram vantagem dos outros ao usá-los para 
+        atingirem seus objetivos, enquanto suas vítimas nem mesmo percebem que estão sendo usadas. 
+        Eles têm uma mente penetrante, racional e soberba, incapaz de ser perturbada por emoções. 
+        Às vezes não podemos deixar de ficar encantados pelo seu talento, mesmo que saibamos que 
+        eles o utilizam mal. Mentes maquiavélicas é o primeiro livro compreensivo de psicologia 
+        sobre o maquiavelismo desde o trabalho pioneiro de Christi e Geis de 1970. 
+        le sumariza as descobertas das pesquisas mais importantes das últimas décadas.
+        </p>
+    <p><strong>Autor:</strong> Tamás Bereczkei</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/Mentes-maquiavélicas-manipulação-Tamás-Bereczkei/dp/8532662226/ref=sr_1_1?crid=2NLK7X2WNCQO9&dib=eyJ2IjoiMSJ9.y88upYaDYOnnIKOuXWPm1vT2bybRyT1RxwiHlgzn6MPqH5BsDVdq4tISXySJ7By6U6iO1CQESoCsPzlukL6dH4f0F5YVCrPMMszD69oCPa3NvWHogMk95M0xzbe40HcpMwO9sjEe5gNpB9d73a9sdLI3AHORe3rl4ki91TiJSjOQKUKEINvUrCRHk9jb6GfIQHHNJ2Gz-E7EZw67UCB804mk9fuqOVUFie0GvmP6_0bbJLhWXT2IRTiWbHEaljVRoW_Oozabglkr5CpHcafGOfVHLmNT_ZJUAgsaKzY5ZTA.sQ1TnYvNxlQSfIFO2_VPpgUVrXUttZRg-7el2NuY8Es&dib_tag=se&keywords=mentes+maquiavélicas&qid=1732026006&sprefix=mentes+ma%2Caps%2C220&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro10">
-            <img src="images/outlive.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Outlive</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro10')">Ver Detalhes</button>
-            <div id="detalhes-livro10" class="detalhes-livro" style="display: none;">
-                <p>Um dos maiores especialistas mundiais em longevidade, Peter Attia investiga o envelhecimento, 
-                    o impacto das doenças crônicas e fornece estratégias práticas para melhorar a saúde e 
-                    prolongar a vida com qualidade.
-                    Antes dos 40 anos, Peter Attia, além de médico renomado, já era um maratonista aquático de 
-                    alto nível, capaz de fazer longas travessias marítimas. Apesar da vida saudável, de repente 
-                    descobriu que tinha uma doença cardiovascular, para a qual estava absolutamente despreparado. 
-                    Quando enfim se deu conta do risco que corria, passou a se dedicar ao estudo da longevidade: 
-                    como e por que morremos, e como podemos retardar ou até mesmo prevenir as principais doenças 
-                    crônicas fatais, como as cardiovasculares, o câncer, o Alzheimer e a diabetes tipo 2?                    
-                    Neste manifesto inovador, Attia revela como a sua jornada pessoal o fez repensar a abordagem 
-                    da medicina com a qual ele e tantos outros colegas e pacientes estavam acostumados. Afinal, 
-                    apesar de todos os seus sucessos, a medicina tradicional parece ter falhado no que diz 
-                    respeito às doenças relacionadas ao envelhecimento. Quase sempre os tratamentos são 
-                    excessivamente tardios, focados em prolongar a longevidade em detrimento da saúde ou da 
-                    qualidade de vida. Attia acredita que é preciso substituir esse modelo ultrapassado por uma 
-                    estratégia personalizada e proativa, na qual as medidas são tomadas aqui e agora, bem antes 
-                    dos primeiros sintomas. Com uma abordagem estratégica e científica, Peter Attia lança um novo 
-                    olhar sobre a longevidade, em busca de saúde física, cognitiva e emocional. Seu objetivo não 
-                    é ditar regras nem apontar falhas, mas ajudar pessoas a transformar seu modo de pensar a 
-                    saúde em longo prazo e, assim, criar o melhor plano individualizado possível para viver mais 
-                    e melhor.</p>
-                <p>(Autor) Peter Attia, Bill Gifford, Bruno Fiuza</p>
-            </div>
-            <a href="https://www.amazon.com.br/Outlive-arte-ciência-viver-melhor/dp/6555606150/ref=sr_1_1?crid=2KHZSPW9L05L0&dib=eyJ2IjoiMSJ9.rXpgscxX9ACbXsAljh9YiJP9CG1RhJKNhruVBSHtsOHMC7vIwyNKyaWD3qGmaGVRRi3uHB5_HI6MoDudCCVaxLZiQGVH3EBtr9UWN11-Y6S7YQy0H7TUWM6TAKdQbyJaYmNbCoH9wtTbxxz72jifpFAuO-447Z4N066v14dXG1K41I3K0g6yMOj-84_X68y2pE3oGnx9tD0JMGCKX_DWP1TER0mPKgNYAsoEbzk1K0nvThYptLq0iUqle8VZQ2x0tx1XDVg0k5pb1hrlUwnfJZjVsP8YjeljpqDrj5ToxNw.dj1Rx-ripfysr7h412NE7GTatmJkoiSz6UVuCfm0-FY&dib_tag=se&keywords=outlive&qid=1732025571&sprefix=outl%2Caps%2C232&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Compre aqui</a>
+      <div class="book-item" id="livro9">
+        <img
+        src="images/a-arte-da-seducao.jpg"
+        alt="Capa do Livro A Arte da Sedução"
+      />
+    <h3 class="book-title">A Arte da Sedução</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro9')">Ver Detalhes</button>
+    <div id="detalhes-livro9" class="detalhes-livro">
+    <p>
+          <strong>A Arte da Sedução</strong> O livro 'A arte da sedução', de Robert Greene, 
+        mostra como homens poderosíssimos como o rei Davi, o troiano Páris, os imperadores 
+        Júlio César e Marco Antônio e o rei Fu Chai viram-se de repente completamente 
+        escravizados pelas mulheres que amaram. Recheado de histórias e construído como um 
+        híbrido entre enciclopédia e um irônico manual de auto-ajuda sobre o assunto, o livro de 
+        Greene mostra como seduzir virou uma arte praticada por pessoas de todas as classes 
+        sociais. Os capítulos do livro são recheados de deliciosas notas laterais que citam de 
+        Ovídio a Baudelaire e fazem uma espécie de história da sedução na literatura e na cultura. 
+        Na primeira parte, Greene lista os tipos de sedutores, ilustrando cada um deles com 
+        personagens famosos da história e das artes. A segunda parte do livro é dedicada ao 
+        'Processo sedutor'. O autor mostra, com a mesma desenvoltura, o passo a passo da conquista.
+        </p>
+    <p><strong>Autor:</strong> Robert Greene</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/arte-sedução-Robert-Greene/dp/6555322047/ref=sr_1_1?crid=3KUDK7KX5ITQU&dib=eyJ2IjoiMSJ9.I1GDGB9V5jZUW889oVBjf65ByG_0PeNGo1FsTIdAjrdbD-x30za1oeh3gRcytbMCzkt_ohouraVEWDkTuktqQqWP7tiVPNMO6BNX-RtsyECHhp36qEEd1xL1YszNw30K6kqCl3aHG_dfhcMFS5u69bHV573dMHDic50QhwilkO6R4q-O-78q2oi6DnkLYtfW4WoIUiA8AyKKJ2AHZKDBnxCBwW9Y9Yue0imtpewwVylEZI05sCq_sMg1SqP_reGq3VvsSB8VYHZ0JHYBcN2knAVVdB13gV-uKBcXrgV949k.aOu6n4W10-aTKhw3JwX8LD1M74RypmTEHDeyjMYopss&dib_tag=se&keywords=a+arte+da+sedução&qid=1732026235&sprefix=a+arte%2Caps%2C308&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
-        <div class="book-item" id="livro11">
-            <img src="images/mentes-maquiavelicas.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Mentes Maquiavelicas</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro11')">Ver Detalhes</button>
-            <div id="detalhes-livro11" class="detalhes-livro" style="display: none;">
-                <p>O mundo está cheio de trapaceiros, vigaristas e impostores. Muitos deles podem ser 
-                    adequadamente descritos com o termo maquiavélico. Tais indivíduos desrespeitam princípios 
-                    morais, enganam seus companheiros e tiram vantagem da fragilidade e inocência dos outros. 
-                    Tiram vantagem dos outros ao usá-los para atingirem seus objetivos, enquanto suas vítimas 
-                    nem mesmo percebem que estão sendo usadas. Eles têm uma mente penetrante, racional e soberba, 
-                    incapaz de ser perturbada por emoções. Às vezes não podemos deixar de ficar encantados pelo 
-                    seu talento, mesmo que saibamos que eles o utilizam mal. Mentes maquiavélicas é o primeiro 
-                    livro compreensivo de psicologia sobre o maquiavelismo desde o trabalho pioneiro de Christi e 
-                    Geis de 1970. Ele sumariza as descobertas das pesquisas mais importantes das últimas décadas.</p>
-                <p>(Autor) Tamás Bereczkei</p>
-            </div>
-            <a href="https://www.amazon.com.br/Mentes-maquiavélicas-manipulação-Tamás-Bereczkei/dp/8532662226/ref=sr_1_1?crid=2NLK7X2WNCQO9&dib=eyJ2IjoiMSJ9.y88upYaDYOnnIKOuXWPm1vT2bybRyT1RxwiHlgzn6MPqH5BsDVdq4tISXySJ7By6U6iO1CQESoCsPzlukL6dH4f0F5YVCrPMMszD69oCPa3NvWHogMk95M0xzbe40HcpMwO9sjEe5gNpB9d73a9sdLI3AHORe3rl4ki91TiJSjOQKUKEINvUrCRHk9jb6GfIQHHNJ2Gz-E7EZw67UCB804mk9fuqOVUFie0GvmP6_0bbJLhWXT2IRTiWbHEaljVRoW_Oozabglkr5CpHcafGOfVHLmNT_ZJUAgsaKzY5ZTA.sQ1TnYvNxlQSfIFO2_VPpgUVrXUttZRg-7el2NuY8Es&dib_tag=se&keywords=mentes+maquiavélicas&qid=1732026006&sprefix=mentes+ma%2Caps%2C220&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Compre aqui</a>
-        </div>
-        <div class="book-item" id="livro12">
-            <img src="images/a-arte-da-seducao.jpg" alt="Capa do Livro">
-            <h3 class="book-title">A Arte da Sedução</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro12')">Ver Detalhes</button>
-            <div id="detalhes-livro12" class="detalhes-livro" style="display: none;">
-                <p>O livro 'A arte da sedução', de Robert Greene, mostra como homens poderosíssimos como o rei 
-                    Davi, o troiano Páris, os imperadores Júlio César e Marco Antônio e o rei Fu Chai viram-se 
-                    de repente completamente escravizados pelas mulheres que amaram. Recheado de histórias e 
-                    construído como um híbrido entre enciclopédia e um irônico manual de auto-ajuda sobre o 
-                    assunto, o livro de Greene mostra como seduzir virou uma arte praticada por pessoas de todas 
-                    as classes sociais. Os capítulos do livro são recheados de deliciosas notas laterais que 
-                    citam de Ovídio a Baudelaire e fazem uma espécie de história da sedução na literatura e na 
-                    cultura. Na primeira parte, Greene lista os tipos de sedutores, ilustrando cada um deles com 
-                    personagens famosos da história e das artes. A segunda parte do livro é dedicada ao 'Processo 
-                    sedutor'. O autor mostra, com a mesma desenvoltura, o passo a passo da conquista.</p>
-                <p>(Autor) Robert Greene</p>
-            </div>
-            <a href="https://www.amazon.com.br/arte-sedução-Robert-Greene/dp/6555322047/ref=sr_1_1?crid=3KUDK7KX5ITQU&dib=eyJ2IjoiMSJ9.I1GDGB9V5jZUW889oVBjf65ByG_0PeNGo1FsTIdAjrdbD-x30za1oeh3gRcytbMCzkt_ohouraVEWDkTuktqQqWP7tiVPNMO6BNX-RtsyECHhp36qEEd1xL1YszNw30K6kqCl3aHG_dfhcMFS5u69bHV573dMHDic50QhwilkO6R4q-O-78q2oi6DnkLYtfW4WoIUiA8AyKKJ2AHZKDBnxCBwW9Y9Yue0imtpewwVylEZI05sCq_sMg1SqP_reGq3VvsSB8VYHZ0JHYBcN2knAVVdB13gV-uKBcXrgV949k.aOu6n4W10-aTKhw3JwX8LD1M74RypmTEHDeyjMYopss&dib_tag=se&keywords=a+arte+da+sedução&qid=1732026235&sprefix=a+arte%2Caps%2C308&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Compre aqui</a>
-        </div>
-        <div class="book-item" id="livro13">
-            <img src="images/como-identificar-um-psicopata.jpg" alt="Capa do Livro">
-            <h3 class="book-title">Como Identificar um Psicopata</h3>
-            <button onclick="mostrarDetalhes('detalhes-livro13')">Ver Detalhes</button>
-            <div id="detalhes-livro13" class="detalhes-livro" style="display: none;">
-                <p>Nem todos os psicopatas são assassinos compulsivos ou criminosos, como você pode pensar. Alguns, aparentemente, são pessoas comuns. Na verdade, 
-                    1% a 3% da população em geral tem fortes tendências psicopatas. Neste livro, a psicóloga forense Kerry Daynes explica como funciona a mente de 
-                    um psicopata. Ela revela os traços de comportamento que os vários tipos de psicopata têm em comum e dá sugestões de como lidar com eles ou, 
-                    melhor ainda, de como evitá-los a todo custo. Por meio de estudos de caso, este livro o ajudará a identificar os possíveis psicopatas em sua 
-                    vida.</p>
-                <p>(Autor) Kerry Daynes, Jessica Fellowes</p>
-            </div>
-            <a href="https://www.amazon.com.br/Como-identificar-psicopata-Kerry-Daynes/dp/8531611857/ref=sr_1_1?crid=NLJG2WR160FP&dib=eyJ2IjoiMSJ9.xzdaIYLGcODMgB10cvD3nA_1vJc6AEo_UgywzsCY3iG2rFMHq3Evqid6fOcAyQEZ4RrLf7WXf1GKtm-sY5fspkEyYDrLH_DUCy_uU9Cr8cdfyqZpOmDte9yMJyWa03vjdIRhRH7Buk5PI4Q9SaENUeEOJoCx9u2N455RYLHXEpp0v-1kz8Tn4DcaTS3RDmsCJyFlMuktq39kMs-K02lyY0MZWVc48-gU1mQqpZzaHI6pBGmdCIkEuns6Yk4kMBoGD2Mn-33UPnCxmpFKUyi4_fdEi5sh-tGnUyMie-K2274.5YSwOch6pkINE251pyH9BV6Kgso6JfTcQ_4ndvmDZGo&dib_tag=se&keywords=como+identificar+um+psicopata&qid=1732454424&sprefix=como+identificar+u%2Caps%2C268&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Compre aqui</a>
+      <div class="book-item" id="livro10">
+        <img
+        src="images/million-dollar-weekend.webp"
+        alt="Capa do Livro Fim de Semana do Milhão"
+      />
+    <h3 class="book-title">Fim de Semana do Milhão</h3>
+    <button onclick="mostrarDetalhes('detalhes-livro10')">Ver Detalhes</button>
+    <div id="detalhes-livro10" class="detalhes-livro">
+    <p>
+          <strong>Fim de Semana do Milhão</strong> Do zero ao faturamento em um fim de semana 
+        Aprenda a transformar ideias em negócios lucrativos rapidamente. Cada vez mais pessoas 
+        sonham em abrir o próprio negócio, mas poucas sabem como dar o primeiro passo ― e menos 
+        ainda conhecem a fórmula para sobreviver aos primeiros anos. Muitas ideias acabam 
+        engavetadas por falta de clareza sobre a demanda do mercado ou pelo medo de investir tempo 
+        e dinheiro em algo que pode não dar certo. Noah Kagan já passou por tudo isso: enfrentou 
+        inseguranças, testou caminhos e conheceu de perto tanto o sucesso quanto o fracasso. 
+        Hoje, reconhecido como um dos grandes nomes do empreendedorismo, Kagan apresenta em Fim de 
+        semana do milhão um método prático e comprovado para transformar uma ideia em um negócio 
+        lucrativo em apenas 48 horas. Neste guia direto e inspirador, ele ensina como criar um 
+        projeto de sucesso do zero, gerar as primeiras vendas rapidamente, validar a demanda, 
+        evitar erros comuns e agir com confiança. Com dicas claras e aplicáveis, o autor mostra 
+        como trocar a paralisia pela ação e o medo pela empolgação, transformando o risco em 
+        oportunidade. Mais do que um manual, este livro é um convite para finalmente tirar o seu 
+        projeto do papel e iniciar, hoje, a sua jornada rumo a um negócio milionário.
+        </p>
+    <p><strong>Autor:</strong> Noah Kagan, Tahl Raz</p>
+    </div>
+        <a
+          href="https://www.amazon.com.br/Fim-Semana-Milhão-negócio-enrolação/dp/6583961032/ref=sr_1_2?crid=1TMNCAE29H0BM&dib=eyJ2IjoiMSJ9.-MSvD3KG5N8tWVR-EYnq31Uao0DJw6zMCbvTp4RQb2XZ0fS2PXirN7rscgDK8qskR3mSWLwF9IG6lj9-KHNAeI7PC7ZNA7Xkkvt9FNHEsrVws3t5_8eOTQPY4K_su6sHTYsLBpYPgnHggfZq4mLvZ2G60jgU0JkB8hlnztdi9hKGEGBGZG2B3ijqJdBC9XU27drv_yS52IWcuIUPf9KoQF4dtTlwo-Eq2gU3uihjhiWzNC_ctdq3ypkGDnLG1M2kqQ__2dfpemWTJQH9IBjIbOuzJW9KX_KQWEMTFIKz3uA.fhRjrnk-iMzzX_d-jbw1zT0FHQotPCgM2SO0j6OUrr0&dib_tag=se&keywords=million+dollar+weekend&qid=1762950725&sprefix=million+do%2Caps%2C277&sr=8-2"
+          target="_blank"
+          class="link-livro"
+          >Compre aqui</a>
         </div>
     </div>
-    <script>
-        function mostrarDetalhes(id) {
-            var detalhes = document.getElementById(id);
-            if (detalhes.style.display === "none" || detalhes.style.display === "") {
-                detalhes.style.display = "block"; // Mostra os detalhes
-            } else {
-                detalhes.style.display = "none"; // Esconde os detalhes
-            }
-        }
+  <!-- Paginação -->
+  <div class="pagination">
+    <button disabled class="page-btn active">1</button>
+    <a href="pagina2.html" class="page-btn transition-link">2</a>
+  </div>
 
-        function filtrarLivros() {
-            // Implementação da função de filtro
-        }
-    </script>
-    <script>
-        function pesquisarLivro() {
-            const termoPesquisa = document.getElementById("searchInput").value.toLowerCase();
-            const livros = document.getElementsByClassName("book-item");
-    
-            for (let livro of livros) {
-                const titulo = livro.querySelector(".book-title").textContent.toLowerCase();
-                
-                // Verifica se o título contém o termo pesquisado
-                if (titulo.includes(termoPesquisa)) {
-                    livro.style.display = "block"; // Exibe o livro se for correspondente
-                } else {
-                    livro.style.display = "none"; // Oculta o livro se não for correspondente
-                }
-            }
-        }
-    </script>    
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Catálogo de Livros | Desenvolvido por Gabriel de Paula</p>
+  </footer>
 </body>
 </html>
